@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b3d91">
+<title>PKL | SMK Ciledug Al-Musaddadiyah Garut</title>
+<meta name="description" content="Program Praktik Kerja Lapangan (PKL) SMK Ciledug Al-Musaddadiyah Garut: alur, bidang per jurusan, persyaratan, dan mitra industri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0b3d91;--blue-d:#082a66;--navy:#061c45;--ink:#0a1b3d;--muted:#55627d;
+  --sky:#e8eefb;--bg:#f6f8fd;--line:#dde4f2;--white:#fff;--soft:#9fb6e6;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font:400 16px/1.7 var(--sans);color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+a{color:inherit}p{margin:0}
+:focus-visible{outline:3px solid #6f9bf0;outline-offset:3px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(28px,3.6vw,40px)}h3{font-size:20px}
+.lead{color:var(--muted);max-width:60ch}
+section{padding:clamp(60px,8vw,104px) 0}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:20px 64px;align-items:end;margin-bottom:48px}
+.alt{background:var(--bg);border-block:1px solid var(--line)}
+
+/* top bar + header */
+.top{background:var(--navy);color:#c5d3f0;font-size:13px}
+.top .wrap{display:flex;justify-content:space-between;gap:16px;padding-block:8px}
+.top a{text-decoration:none}.top a:hover{color:#fff}
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.brand img{width:42px;height:42px;object-fit:contain}
+.brand b{display:block;font:600 15px/1.2 var(--sans);color:var(--blue)}
+.brand small{display:block;font-size:12px;color:var(--muted)}
+nav{display:flex;gap:6px}
+nav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--muted);padding:8px 14px;border-radius:999px;transition:.2s}
+nav a:hover{color:var(--blue);background:var(--sky)}
+nav a.on{color:var(--blue);background:var(--sky)}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:600 14px/1 var(--sans);padding:15px 24px;border-radius:999px;text-decoration:none;border:1.5px solid var(--blue);background:var(--blue);color:#fff;transition:.2s;cursor:pointer}
+.btn:hover{background:var(--blue-d)}
+.btn.ghost{background:transparent;color:var(--blue)}.btn.ghost:hover{background:var(--sky)}
+.btn.sm{padding:12px 20px}
+.menu{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;cursor:pointer;color:var(--blue)}
+
+/* hero */
+.hero{background:radial-gradient(900px 400px at 85% 0,#14459f 0,transparent 60%),linear-gradient(160deg,var(--navy),var(--blue-d) 70%);color:#fff;padding:clamp(56px,8vw,104px) 0 0;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(38px,5.6vw,64px)}
+.hero h1 span{color:var(--soft)}
+.hero .lead{color:#c5d3f0;margin:22px 0 32px;font-size:18px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn{background:#fff;color:var(--blue);border-color:#fff}.hero .btn:hover{background:var(--sky)}
+.hero .btn.ghost{background:transparent;color:#fff;border-color:#6d8ccc}.hero .btn.ghost:hover{background:rgba(255,255,255,.1)}
+.photo{position:relative;aspect-ratio:4/3.2;border-radius:24px 24px 0 0;overflow:hidden;background:#12408f;align-self:end}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(6,28,69,.55))}
+.tag{position:absolute;left:18px;bottom:18px;z-index:1;background:#fff;color:var(--ink);border-radius:14px;padding:12px 16px;font-size:13px;line-height:1.4;box-shadow:0 10px 30px rgba(6,28,69,.3)}
+.tag b{display:block;font:600 15px var(--sans);color:var(--blue)}
+.rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}.rise.d{animation-delay:.12s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* stats */
+.stats{background:var(--white);border-bottom:1px solid var(--line)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stats div{padding:30px 24px 30px 0}
+.stats div+div{padding-left:24px;border-left:1px solid var(--line)}
+.stats b{display:block;font:500 34px/1.1 var(--serif);color:var(--blue)}
+.stats span{font-size:14px;color:var(--muted)}
+
+/* tujuan */
+.aims{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.aims div{padding:28px 28px 8px 0}.aims div+div{padding-left:28px;border-left:1px solid var(--line)}
+.aims p{color:var(--muted);margin-top:10px;font-size:15px}
+
+/* alur */
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;counter-reset:s}
+.flow li{position:relative;padding-top:34px;border-top:2px solid var(--line)}
+.flow li::before{counter-increment:s;content:counter(s);position:absolute;top:-17px;left:0;width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font:600 13px var(--sans)}
+.flow h3{font-size:18px;margin-bottom:6px}
+.flow p{font-size:14.5px;color:var(--muted)}
+
+/* jurusan tabs */
+.tabs{display:grid;grid-template-columns:300px 1fr;gap:32px;align-items:start}
+.tl{display:flex;flex-direction:column;gap:6px}
+.tl button{text-align:left;font:500 15px/1.3 var(--sans);padding:14px 18px;border-radius:12px;border:1px solid transparent;background:transparent;color:var(--muted);cursor:pointer;transition:.2s}
+.tl button:hover{background:var(--sky);color:var(--blue)}
+.tl button[aria-selected=true]{background:var(--white);border-color:var(--line);color:var(--blue);font-weight:600;box-shadow:0 4px 16px rgba(11,61,145,.08)}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,4vw,40px);min-height:260px}
+.panel[hidden]{display:none}
+.panel h3{font-size:26px;margin-bottom:6px}
+.panel > p{color:var(--muted);max-width:60ch}
+.panel ul{margin:22px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.panel li{padding-left:22px;position:relative;font-size:15px}
+.panel li::before{content:"";position:absolute;left:0;top:.7em;width:10px;height:2px;background:var(--blue)}
+
+/* mitra */
+.partners{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--white)}
+.partners span{padding:26px 14px;text-align:center;font:500 15px/1.35 var(--serif);color:var(--blue-d);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.partners span:nth-child(5n){border-right:0}.partners span:nth-last-child(-n+5){border-bottom:0}
+
+/* syarat */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.box{border:1px solid var(--line);border-radius:20px;padding:clamp(24px,4vw,40px);background:var(--white)}
+.box h3{margin-bottom:16px}
+.box ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.box li{padding-left:28px;position:relative;color:var(--muted);font-size:15px}
+.box li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:16px;border-radius:50%;background:var(--sky) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-4.7' fill='none' stroke='%230b3d91' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.box .btn{margin-top:24px}
+
+/* testimoni */
+.quote{max-width:820px}
+.quote blockquote{margin:0;font:500 clamp(22px,3vw,30px)/1.4 var(--serif);color:var(--ink)}
+.quote figcaption{margin-top:22px;display:flex;align-items:center;gap:14px;font-size:14px;color:var(--muted)}
+.quote figcaption i{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font:600 16px var(--sans);font-style:normal}
+.quote figcaption b{display:block;color:var(--ink);font-size:15px}
+
+/* faq */
+details{border-bottom:1px solid var(--line)}
+.faq{border-top:1px solid var(--ink);max-width:860px}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:22px 4px;font:500 19px/1.35 var(--serif)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 26px/1 var(--sans);color:var(--blue);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 4px 22px;color:var(--muted);max-width:70ch}
+
+/* cta + footer */
+.final{background:linear-gradient(150deg,var(--navy),var(--blue));color:#fff;border-radius:28px;padding:clamp(32px,6vw,64px);display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.final h2{color:#fff}.final p{color:#c5d3f0;margin-top:12px;max-width:52ch}
+.final .btn{background:#fff;color:var(--blue);border-color:#fff}.final .btn:hover{background:var(--sky)}
+.final .btn.ghost{background:transparent;color:#fff;border-color:#6d8ccc}.final .btn.ghost:hover{background:rgba(255,255,255,.1)}
+.final .cta{justify-content:flex-end}
+footer{background:var(--navy);color:#b6c6e8;font-size:14px;padding:56px 0 28px;margin-top:clamp(60px,8vw,104px)}
+footer .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer b{display:block;color:#fff;margin-bottom:10px;font-weight:600}
+footer a{text-decoration:none;display:block;padding:3px 0}footer a:hover{color:#fff}
+footer .c{margin-top:40px;padding-top:20px;border-top:1px solid #1d3568;font-size:13px}
+
+@media (max-width:980px){
+  .hero .wrap,.head,.final,.two,.tabs,footer .g{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr;gap:28px;border-left:2px solid var(--line);padding-left:28px}
+  .flow li{border-top:0;padding-top:0}.flow li::before{top:0;left:-45px}
+  .tl{flex-direction:row;overflow-x:auto;padding-bottom:6px}.tl button{white-space:nowrap}
+  .partners{grid-template-columns:repeat(2,1fr)}
+  .partners span:nth-child(n){border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .partners span:nth-child(2n){border-right:0}
+  .final .cta{justify-content:flex-start}
+  .photo{border-radius:20px 20px 0 0}
+}
+@media (max-width:760px){
+  .menu{display:grid;place-items:center}
+  nav{display:none;position:absolute;left:0;right:0;top:72px;background:#fff;flex-direction:column;padding:12px var(--pad) 20px;border-bottom:1px solid var(--line)}
+  nav.open{display:flex}
+  .bar>.btn{display:none}.top span:last-child{display:none}
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .stats div:nth-child(3){border-left:0;padding-left:0}
+  .stats div:nth-child(n+3){border-top:1px solid var(--line)}
+  .aims{grid-template-columns:1fr}.aims div,.aims div+div{padding:24px 0;border-left:0}.aims div+div{border-top:1px solid var(--line)}
+  .panel ul{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rise{animation:none}}
+
+/* gaya mengikuti website sekolah */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips span{font-size:13px;font-weight:500;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#e3ecff}
+.hero .lead{margin-top:18px}
+.lang{display:flex;gap:4px;margin-left:auto}
+.lang button{font:500 13px var(--sans);padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+.ico{font-size:28px;line-height:1;margin-bottom:14px}
+.stars{color:#e0a82e;letter-spacing:3px;margin-bottom:14px}
+footer .g>div>span{display:block;max-width:44ch}
+@media (max-width:760px){.lang{margin-left:0}.bar{height:auto;padding-block:10px;flex-wrap:wrap}nav{top:100%}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap"><span data-en="Welcome to the PKL page of SMK CALM">Assalamu'alaikum, selamat datang di halaman PKL SMK CALM</span><span><a href="tel:+622624892181">(0262) 4892181</a> &nbsp;|&nbsp; <a href="mailto:info@smkciledug.sch.id">info@smkciledug.sch.id</a></span></div></div>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="https://www.smkciledugalmusaddadiyah.sch.id/">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD-8YPFS6i86EyZZNDUhwuam5ro_mtc9So2muvB7EDWz1Zp6rarLubvVS3vfVVoto_S6SaHlIPPnmNaddUugGUztWkJYhDwwT8CU1BcUuq9TNyxnHKa6B44iDBx6LjR1-z3r7_C34jviaWeOYgk4bNJHsziPV4KR5mQjY69HVhyphenhyphenR3STD4xp-b46x_HeR4/s160/An8Em6pLCtVUNFZTK-rgdQG9pKiDxE1AR7m_1QO_5slD3C5qFXYq7S9suI1ztpViB_aUnbOGE2-Y71AU9SF3GjQzZ09xbw5aat-JT_7ptJ4VcfdGeJ73DWbHD9IDtVHa_16MjCj09HJ4eGBvZMo-removebg-preview.png" alt="Logo SMK Ciledug Al-Musaddadiyah">
+      <span><b>SMK CALM</b><small>Ciledug Al-Musaddadiyah &middot; Garut</small></span>
+    </a>
+    <nav id="nav" aria-label="Navigasi halaman">
+      <a href="#nilai" data-en="Values">Nilai</a><a href="#alur" data-en="Flow">Alur</a><a href="#jurusan" data-en="Programs">Jurusan</a><a href="#mitra" data-en="Partners">Mitra</a><a href="#syarat" data-en="Requirements">Persyaratan</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Bahasa"><button type="button" data-l="id" aria-pressed="true">🇮🇩 ID</button><button type="button" data-l="en" aria-pressed="false">🇬🇧 EN</button></div>
+    <button class="menu" id="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div style="padding-bottom:clamp(40px,6vw,88px)">
+      <h1 class="rise" data-en="Building Skilled and Adaptive Graduates Through Internships">Mencetak Lulusan <span>Unggul dan Adaptif</span> Lewat Praktik Kerja Lapangan</h1>
+      <div class="chips rise d"><span data-en="✓ Career, Entrepreneur & College Ready">✓ Siap Kerja, Wirausaha &amp; Kuliah</span><span data-en="✓ Industry Partners">✓ Mitra Industri &amp; DUDI</span><span data-en="✓ Job Placement Service">✓ Bursa Kerja Khusus</span></div>
+      <p class="lead rise d" data-en="Through PKL, SMK CALM students learn directly alongside industry partners and return with real skills, discipline, and work experience.">Lewat PKL, siswa SMK CALM belajar langsung bersama mitra industri dan pulang dengan keterampilan nyata, disiplin, serta pengalaman kerja yang berharga.</p>
+      <div class="cta rise d"><a class="btn" href="#alur" data-en="View PKL Flow">Lihat Alur PKL</a><a class="btn ghost" href="#syarat" data-en="Requirements">Persyaratan</a></div>
+    </div>
+    <div class="photo rise d">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiS2Dni_gLuGSCYXp_j4sm1fEBnbF9e49dkeaKDA9TG_4wGkrtPobq-AO8Z8qgSNTLSfHiIegE0qMXaYDSV3_8ioynvpUny3UP2-j1pWQRmNg1UXPQA5aW7c98_RMqtDEEffaqd2ODd_Hc55tj_gkt8AZ31TdaC8M3ZF8s9MjOQKsWihUwouyS881ATfSA/rw-w1280/WhatsApp%20Image%202026-04-13%20at%2012.43.37%20(1).jpeg" alt="Siswa SMK CALM berlatih di ruang praktik" onerror="this.remove()">
+      <div class="tag"><b data-en="Industry-Standard Facilities">Fasilitas Bertaraf Industri</b><span data-en="Modern practice rooms, post-revitalization">Ruang praktik modern pasca-revitalisasi</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="stats"><div class="wrap">
+  <div><b>7</b><span data-en="Study Programs">Jurusan Unggulan</span></div>
+  <div><b>9+</b><span data-en="Industry Partners">Mitra Industri</span></div>
+  <div><b>5.110+</b><span data-en="Successful Alumni">Alumni Berprestasi &amp; Berkarier</span></div>
+  <div><b>1996</b><span data-en="Established">Berdiri Sejak</span></div>
+</div></div>
+
+<section id="nilai">
+  <div class="wrap">
+    <div class="head"><h2 data-en="Learning Beyond the Classroom">Belajar Melampaui Ruang Kelas</h2><p class="lead" data-en="PKL connects what students learn at school with real workplace standards, grounded in faith and character.">PKL menghubungkan ilmu di sekolah dengan standar dunia kerja yang sebenarnya, berlandaskan iman dan akhlak.</p></div>
+    <div class="aims">
+      <div><div class="ico">🕌</div><h3 data-en="Faith & Character">Iman &amp; Akhlak</h3><p data-en="Building punctuality, responsibility, honesty, and professional manners in the workplace.">Membiasakan disiplin, tanggung jawab, kejujuran, dan adab profesional di tempat kerja.</p></div>
+      <div><div class="ico">📚</div><h3 data-en="Knowledge & Competence">Ilmu &amp; Kompetensi</h3><p data-en="Applying vocational skills to real work and aligning them with industry standards.">Menerapkan keahlian jurusan pada pekerjaan nyata sesuai standar industri.</p></div>
+      <div><div class="ico">🚀</div><h3 data-en="Innovation & Achievement">Inovasi &amp; Prestasi</h3><p data-en="Opening connections with partners as a path to employment, entrepreneurship, or college.">Membuka relasi dengan mitra sebagai jalan menuju kerja, wirausaha, atau kuliah.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="alur" class="alt">
+  <div class="wrap">
+    <div class="head"><h2 data-en="PKL Step by Step">Alur PKL, Selangkah demi Selangkah</h2><p class="lead" data-en="Five stages from preparation to competency recognition.">Lima tahap dari persiapan sampai pengakuan kompetensi.</p></div>
+    <ol class="flow">
+      <li><h3 data-en="Preparation">Persiapan</h3><p data-en="Student data, work-ethic briefing, and administrative documents.">Pendataan siswa, pembekalan etika kerja, dan kelengkapan dokumen.</p></li>
+      <li><h3 data-en="Placement">Penempatan</h3><p data-en="Students are matched with partners by program and officially delivered by the school.">Siswa ditempatkan di mitra sesuai jurusan dan diantar resmi oleh sekolah.</p></li>
+      <li><h3 data-en="Practice">Pelaksanaan</h3><p data-en="Students work under industry mentors and are monitored by school supervisors.">Siswa bekerja dibimbing pembimbing industri dan dipantau guru pembimbing.</p></li>
+      <li><h3 data-en="Report & Assessment">Laporan &amp; Penilaian</h3><p data-en="Activity reports are written, then assessed by industry and school together.">Laporan kegiatan disusun, lalu dinilai bersama oleh industri dan sekolah.</p></li>
+      <li><h3 data-en="Certification">Sertifikasi</h3><p data-en="Students who complete the program receive a PKL certificate.">Siswa yang tuntas menerima sertifikat PKL sebagai bukti pengalaman kerja.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="jurusan">
+  <div class="wrap">
+    <div class="head"><h2 data-en="Choose Your PKL Field">Pilih Bidang PKL Sesuai Jurusanmu</h2><p class="lead" data-en="Seven study programs, each with its own workplace scope.">Tujuh program keahlian, masing-masing dengan lingkup pekerjaan yang berbeda.</p></div>
+    <div class="tabs">
+      <div class="tl" role="tablist" aria-label="Jurusan" id="tl"></div>
+      <div id="pn"></div>
+    </div>
+  </div>
+</section>
+
+<section id="mitra" class="alt">
+  <div class="wrap">
+    <div class="head"><h2 data-en="Industry Partners">Mitra Industri</h2><p class="lead" data-en="Partnered with 9+ industry companies for internships and job placement.">Bermitra dengan 9+ perusahaan industri untuk PKL &amp; penempatan kerja.</p></div>
+    <div class="partners">
+      <span>Perumda BPR Garut</span><span>Bank BNI</span><span>Telkom Indonesia</span><span>Maxprint</span><span>CV. Alnda Maju Berjaya</span>
+      <span>Haltech 3D Indonesia</span><span>Mobidu</span><span>Honda</span><span>Toyota</span><span>Pintar Bersama Daihatsu</span>
+    </div>
+  </div>
+</section>
+
+<section id="syarat">
+  <div class="wrap">
+    <div class="head"><h2 data-en="Requirements & Documents">Persyaratan &amp; Dokumen</h2><p class="lead" data-en="General rules for students and companies. Final details follow the school's PKL guide.">Ketentuan umum untuk siswa dan perusahaan. Rincian akhir mengikuti panduan PKL sekolah.</p></div>
+    <div class="two">
+      <div class="box"><h3 data-en="For Students">Untuk Siswa</h3><ul>
+        <li data-en="Registered as an active SMK CALM student">Terdaftar sebagai siswa aktif SMK CALM</li>
+        <li data-en="Attend the briefing before placement">Mengikuti pembekalan sebelum penempatan</li>
+        <li data-en="Complete the administrative documents">Melengkapi dokumen administrasi dari sekolah</li>
+        <li data-en="Follow workplace rules and working hours">Menaati tata tertib dan jam kerja perusahaan</li>
+        <li data-en="Fill in the daily journal and write the final report">Mengisi jurnal harian dan menyusun laporan akhir</li>
+      </ul><a class="btn ghost sm" href="https://www.smkciledugalmusaddadiyah.sch.id/p/download-administrasi.html" data-en="Download Documents">📥 Unduh Dokumen</a></div>
+      <div class="box"><h3 data-en="For Partner Companies">Untuk Perusahaan Mitra</h3><ul>
+        <li data-en="Assign a mentor to accompany students">Menunjuk pembimbing yang mendampingi siswa</li>
+        <li data-en="Provide work scope that fits the program">Menyediakan lingkup pekerjaan sesuai jurusan</li>
+        <li data-en="Apply workplace safety standards">Menerapkan standar keselamatan kerja</li>
+        <li data-en="Give a performance assessment at the end">Memberikan penilaian kinerja di akhir program</li>
+        <li data-en="Sign a cooperation agreement with the school">Menandatangani perjanjian kerja sama dengan sekolah</li>
+      </ul><a class="btn ghost sm" href="#kontak" data-en="Propose Partnership">🤝 Ajukan Kerja Sama</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <figure class="quote" style="margin:0">
+      <div class="stars" aria-label="5 dari 5">★★★★★</div>
+      <blockquote>“Berkat PKL dan koneksi industri yang difasilitasi SMK CALM, saya langsung diterima kerja di bengkel resmi bahkan sebelum wisuda.”</blockquote>
+      <figcaption><i>D</i><span><b>Deni Firmansyah</b><span data-en="TKR Alumnus, Official Workshop Technician">Alumni TKR, Teknisi Bengkel Resmi</span></span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="head"><h2 data-en="Frequently Asked Questions">Pertanyaan yang Sering Diajukan</h2><p class="lead" data-en="Short answers about how PKL works.">Jawaban singkat seputar pelaksanaan PKL.</p></div>
+    <div class="faq">
+      <details><summary data-en="Who decides the PKL placement?">Siapa yang menentukan tempat PKL?</summary><p data-en="The school places students with partners that match their program. Students who want to suggest another place can consult the PKL committee.">Sekolah menempatkan siswa pada mitra yang sesuai jurusannya. Siswa yang ingin mengusulkan tempat lain dapat berkonsultasi dengan panitia PKL.</p></details>
+      <details><summary data-en="How long does PKL last?">Berapa lama PKL berlangsung?</summary><p data-en="The duration follows the academic calendar and school policy. The PKL committee will announce it during the briefing.">Durasi mengikuti kalender akademik dan kebijakan sekolah. Panitia PKL akan menginformasikannya saat pembekalan.</p></details>
+      <details><summary data-en="How are students assessed?">Bagaimana siswa dinilai?</summary><p data-en="Assessment comes from the industry mentor and school supervisor: technical skills, work attitude, daily journal, and final report.">Penilaian berasal dari pembimbing industri dan guru pembimbing: keterampilan teknis, sikap kerja, jurnal harian, dan laporan akhir.</p></details>
+      <details><summary data-en="How can a company become a partner?">Bagaimana perusahaan bisa menjadi mitra?</summary><p data-en="Contact the PKL committee via WhatsApp or phone. The school will explain the cooperation process and prepare the agreement.">Hubungi panitia PKL lewat WhatsApp atau telepon. Sekolah akan menjelaskan mekanisme kerja sama dan menyiapkan perjanjiannya.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="kontak" style="padding-bottom:0">
+  <div class="wrap"><div class="final">
+    <div><h2 data-en="Ready to Partner with SMK CALM?">Siap Bermitra dengan SMK CALM?</h2><p data-en="Contact the PKL committee to discuss cooperation, student placement, and your company's workforce needs.">Hubungi panitia PKL untuk membahas kerja sama, penempatan siswa, dan kebutuhan tenaga kerja di perusahaan Anda.</p></div>
+    <div class="cta"><a class="btn" href="https://wa.me/6287856681523?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20mengenai%20PKL%20SMK%20CALM" target="_blank" rel="noopener" data-en="💬 Chat via WhatsApp">💬 Tanya via WhatsApp</a><a class="btn ghost" href="tel:+622624892181" data-en="📞 Contact Us">📞 Hubungi Kami</a></div>
+  </div></div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="g">
+      <div><b>SMK Ciledug Al-Musaddadiyah</b><span data-en="Nurturing faithful, knowledgeable, and competitive generations since 1996. Serving students from all of Garut Regency and beyond, under the Al-Musaddadiyah Foundation.">Mencetak generasi beriman, berilmu, dan berdaya saing tinggi sejak 1996. Melayani siswa dari seluruh Kabupaten Garut &amp; sekitarnya, di bawah naungan Yayasan Al-Musaddadiyah Garut.</span><br><br>Jl. Mayor Syamsu No.2, Jayaraga, Tarogong Kidul, Garut<br>NPSN 20209207</div>
+      <div><b data-en="Information">Informasi</b><a href="https://www.smkciledugalmusaddadiyah.sch.id/p/profil.html" data-en="School Profile">Profil Sekolah</a><a href="https://www.smkciledugalmusaddadiyah.sch.id/p/visi-dan-misi.html" data-en="Vision & Mission">Visi &amp; Misi</a><a href="https://www.smkciledugalmusaddadiyah.sch.id/p/alumni-tracker.html">Alumni Tracker</a></div>
+      <div><b data-en="Admissions">Penerimaan</b><a href="https://www.smkciledugalmusaddadiyah.sch.id/p/ppdb-online-smk-ciledug-al-musaddadiyah.html" data-en="Apply Online">Daftar Online</a><a href="https://www.smkciledugalmusaddadiyah.sch.id/p/kontak.html" data-en="Contact">Kontak</a><a href="https://www.smkciledugalmusaddadiyah.sch.id/" data-en="Home">Beranda</a></div>
+    </div>
+    <div class="c" data-en="© 2026 SMK Ciledug Al-Musaddadiyah · Committed to Quality Education">© 2026 SMK Ciledug Al-Musaddadiyah · Berkomitmen untuk Pendidikan Berkualitas</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var M=[
+   ["📊","Akuntansi Keuangan Lembaga","AKL","Menjadi tenaga akuntansi profesional dengan penguasaan keuangan digital, perpajakan, dan aplikasi akuntansi.",["Input jurnal dan buku besar","Laporan keuangan","Administrasi perpajakan","Aplikasi akuntansi digital"],"Institutional Financial Accounting","Work as a professional accountant using digital finance, taxation, and accounting software.",["Journal and ledger entry","Financial reports","Tax administration","Digital accounting apps"]],
+   ["🛒","Bisnis Digital","BD","Membangun skill bisnis digital, social media marketing, dan branding modern di dunia usaha.",["Pengelolaan media sosial","Toko daring & marketplace","Konten & branding","Pelayanan pelanggan"],"Digital Business","Build digital business, social media marketing, and modern branding skills in real companies.",["Social media management","Online store & marketplace","Content & branding","Customer service"]],
+   ["🎨","Desain Komunikasi Visual","DKV","Praktik desain visual, ilustrasi digital, dan branding kreatif untuk percetakan dan agensi.",["Desain grafis & ilustrasi","Foto & video","Materi cetak & promosi","Branding visual"],"Visual Communication Design","Practice visual design, digital illustration, and creative branding at print shops and agencies.",["Graphic design & illustration","Photo & video","Print & promo materials","Visual branding"]],
+   ["💻","Teknik Komputer & Jaringan","TKJ","Praktik networking, administrasi server, dan dukungan teknis IT di perusahaan dan instansi.",["Instalasi jaringan","Administrasi server","Dukungan teknis IT","Perbaikan perangkat"],"Computer & Network Engineering","Hands-on networking, server administration, and IT support at companies and institutions.",["Network installation","Server administration","IT support","Device repair"]],
+   ["🚗","Teknik Kendaraan Ringan","TKR","Praktik teknologi kendaraan modern dan servis otomotif di bengkel umum maupun dealer resmi.",["Servis berkala","Perawatan mesin","Sistem kelistrikan","Pelayanan bengkel"],"Light Vehicle Engineering","Practice modern vehicle technology and automotive service at workshops and official dealers.",["Periodic service","Engine maintenance","Electrical systems","Workshop service"]],
+   ["🏍️","Teknik Sepeda Motor","TSM","Praktik servis roda dua berbasis teknologi injeksi langsung di bengkel dan dealer.",["Servis sepeda motor","Sistem injeksi","Diagnosis kerusakan","Administrasi bengkel"],"Motorcycle Engineering","Practice two-wheeler service with injection technology at workshops and dealers.",["Motorcycle service","Injection systems","Fault diagnosis","Workshop administration"]],
+   ["💼","Manajemen Perkantoran","MPLB","Praktik administrasi dan layanan perkantoran dengan teknologi perkantoran modern.",["Surat & kearsipan","Layanan front office","Pengelolaan data","Dukungan kegiatan kantor"],"Office Management","Practice administration and office services using modern office technology.",["Letters & archiving","Front office service","Data management","Office event support"]]
+  ];
+  var tl=document.getElementById('tl'),pn=document.getElementById('pn'),en=false;
+  function render(sel){
+    tl.innerHTML='';pn.innerHTML='';
+    M.forEach(function(m,i){
+      var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.id='t'+i;
+      b.setAttribute('aria-selected',i===sel);b.setAttribute('aria-controls','p'+i);b.textContent=m[0]+' '+(en?m[5]:m[1]);tl.appendChild(b);
+      var p=document.createElement('div');p.className='panel';p.id='p'+i;p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby','t'+i);if(i!==sel)p.hidden=true;
+      var L=en?m[8]:m[4];
+      p.innerHTML='<h3>'+m[0]+' '+(en?m[5]:m[1])+' ('+m[2]+')</h3><p>'+(en?m[6]:m[3])+'</p><ul>'+L.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>';
+      pn.appendChild(p);
+      b.addEventListener('click',function(){render(i)});
+    });
+  }
+  render(0);
+  function setLang(l){
+    en=l==='en';document.documentElement.lang=l;
+    document.querySelectorAll('[data-en]').forEach(function(e){
+      if(!e.hasAttribute('data-id'))e.setAttribute('data-id',e.innerHTML);
+      e.innerHTML=en?e.getAttribute('data-en'):e.getAttribute('data-id');
+    });
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l)});
+    var s=0;tl.querySelectorAll('button').forEach(function(b,i){if(b.getAttribute('aria-selected')==='true')s=i});render(s);
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.l)})});
+  var menu=document.getElementById('menu'),nav=document.getElementById('nav');
+  menu.addEventListener('click',function(){var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');menu.setAttribute('aria-expanded',false)}});
+  if('IntersectionObserver' in window){
+    var links=nav.querySelectorAll('a');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}
+    })},{rootMargin:'-45% 0px -50% 0px'});
+    links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)io.observe(s)});
+  }
+})();
+</script>
+</body>
+</html>
