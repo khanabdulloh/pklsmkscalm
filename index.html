@@ -8,7 +8,7 @@
 <meta name="description" content="Program Praktik Kerja Lapangan (PKL) SMK Ciledug Al-Musaddadiyah Garut: alur, bidang per jurusan, persyaratan, dan mitra industri.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --blue:#0b3d91;--blue-d:#082a66;--navy:#061c45;--ink:#0a1b3d;--muted:#55627d;
@@ -179,6 +179,18 @@ footer .c{margin-top:40px;padding-top:20px;border-top:1px solid #1d3568;font-siz
 .stars{color:#e0a82e;letter-spacing:3px;margin-bottom:14px}
 footer .g>div>span{display:block;max-width:44ch}
 @media (max-width:760px){.lang{margin-left:0}.bar{height:auto;padding-block:10px;flex-wrap:wrap}nav{top:100%}}
+
+/* ===== Tema cerah & modern (rujukan: smkciledugalmusaddadiyah.sch.id) ===== */
+:root{--blue:#1456d8;--blue-d:#0f47b8;--navy:#0b3d91;--ink:#0f1f45;--muted:#50607f;--sky:#eaf2ff;--bg:#f6f9ff;--line:#e0e9f8;--soft:#cfe0ff;--serif:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-weight:800;letter-spacing:-.025em}
+.stats b{font-weight:800}
+.hero{background:radial-gradient(900px 400px at 85% -10%,rgba(255,255,255,.22),transparent 60%),linear-gradient(135deg,#0b3d91,#1456d8 60%,#2f7bff)}
+.hero h1 span{color:#ffd569}
+.hero .lead,.final p{color:#e6efff}
+.final{background:linear-gradient(135deg,#0b3d91,#1456d8 70%,#2f7bff)}
+.aims,.faq{border-top-color:var(--blue)}
+.ico{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--sky);color:var(--blue);font:800 18px var(--sans);margin-bottom:14px}
+footer .c{border-top-color:rgba(255,255,255,.18)}
 </style>
 </head>
 <body>
@@ -194,7 +206,7 @@ footer .g>div>span{display:block;max-width:44ch}
     <nav id="nav" aria-label="Navigasi halaman">
       <a href="#nilai" data-en="Values">Nilai</a><a href="#alur" data-en="Flow">Alur</a><a href="#jurusan" data-en="Programs">Jurusan</a><a href="#mitra" data-en="Partners">Mitra</a><a href="#syarat" data-en="Requirements">Persyaratan</a><a href="#faq">FAQ</a>
     </nav>
-    <div class="lang" role="group" aria-label="Bahasa"><button type="button" data-l="id" aria-pressed="true">🇮🇩 ID</button><button type="button" data-l="en" aria-pressed="false">🇬🇧 EN</button></div>
+    <div class="lang" role="group" aria-label="Bahasa"><button type="button" data-l="id" aria-pressed="true">ID</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
     <button class="menu" id="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button>
   </div>
 </header>
@@ -203,9 +215,9 @@ footer .g>div>span{display:block;max-width:44ch}
 <div class="hero">
   <div class="wrap">
     <div style="padding-bottom:clamp(40px,6vw,88px)">
-      <h1 class="rise" data-en="Building Skilled and Adaptive Graduates Through Internships">Mencetak Lulusan <span>Unggul dan Adaptif</span> Lewat Praktik Kerja Lapangan</h1>
+      <h1 class="rise" data-en="Building <span>Skilled and Adaptive</span> Graduates Through Internships">Mencetak Lulusan <span>Unggul dan Adaptif</span> Lewat Praktik Kerja Lapangan</h1>
       <div class="chips rise d"><span data-en="✓ Career, Entrepreneur & College Ready">✓ Siap Kerja, Wirausaha &amp; Kuliah</span><span data-en="✓ Industry Partners">✓ Mitra Industri &amp; DUDI</span><span data-en="✓ Job Placement Service">✓ Bursa Kerja Khusus</span></div>
-      <p class="lead rise d" data-en="Through PKL, SMK CALM students learn directly alongside industry partners and return with real skills, discipline, and work experience.">Lewat PKL, siswa SMK CALM belajar langsung bersama mitra industri dan pulang dengan keterampilan nyata, disiplin, serta pengalaman kerja yang berharga.</p>
+      <p class="lead rise d" data-en="Through PKL, SMK CALM students learn on the job alongside industry partners and return with technical skills, discipline, and professional experience.">Melalui PKL, siswa SMK CALM belajar langsung di dunia kerja bersama mitra industri dan kembali dengan keterampilan teknis, disiplin, serta pengalaman profesional.</p>
       <div class="cta rise d"><a class="btn" href="#alur" data-en="View PKL Flow">Lihat Alur PKL</a><a class="btn ghost" href="#syarat" data-en="Requirements">Persyaratan</a></div>
     </div>
     <div class="photo rise d">
@@ -226,9 +238,9 @@ footer .g>div>span{display:block;max-width:44ch}
   <div class="wrap">
     <div class="head"><h2 data-en="Learning Beyond the Classroom">Belajar Melampaui Ruang Kelas</h2><p class="lead" data-en="PKL connects what students learn at school with real workplace standards, grounded in faith and character.">PKL menghubungkan ilmu di sekolah dengan standar dunia kerja yang sebenarnya, berlandaskan iman dan akhlak.</p></div>
     <div class="aims">
-      <div><div class="ico">🕌</div><h3 data-en="Faith & Character">Iman &amp; Akhlak</h3><p data-en="Building punctuality, responsibility, honesty, and professional manners in the workplace.">Membiasakan disiplin, tanggung jawab, kejujuran, dan adab profesional di tempat kerja.</p></div>
-      <div><div class="ico">📚</div><h3 data-en="Knowledge & Competence">Ilmu &amp; Kompetensi</h3><p data-en="Applying vocational skills to real work and aligning them with industry standards.">Menerapkan keahlian jurusan pada pekerjaan nyata sesuai standar industri.</p></div>
-      <div><div class="ico">🚀</div><h3 data-en="Innovation & Achievement">Inovasi &amp; Prestasi</h3><p data-en="Opening connections with partners as a path to employment, entrepreneurship, or college.">Membuka relasi dengan mitra sebagai jalan menuju kerja, wirausaha, atau kuliah.</p></div>
+      <div><div class="ico">I</div><h3 data-en="Faith & Character">Iman &amp; Akhlak</h3><p data-en="Building punctuality, responsibility, honesty, and professional manners in the workplace.">Membiasakan disiplin, tanggung jawab, kejujuran, dan adab profesional di tempat kerja.</p></div>
+      <div><div class="ico">K</div><h3 data-en="Knowledge & Competence">Ilmu &amp; Kompetensi</h3><p data-en="Applying vocational skills to real work and aligning them with industry standards.">Menerapkan keahlian jurusan pada pekerjaan nyata sesuai standar industri.</p></div>
+      <div><div class="ico">P</div><h3 data-en="Innovation & Achievement">Inovasi &amp; Prestasi</h3><p data-en="Opening connections with partners as a path to employment, entrepreneurship, or college.">Membuka relasi dengan mitra sebagai jalan menuju kerja, wirausaha, atau kuliah.</p></div>
     </div>
   </div>
 </section>
@@ -276,14 +288,14 @@ footer .g>div>span{display:block;max-width:44ch}
         <li data-en="Complete the administrative documents">Melengkapi dokumen administrasi dari sekolah</li>
         <li data-en="Follow workplace rules and working hours">Menaati tata tertib dan jam kerja perusahaan</li>
         <li data-en="Fill in the daily journal and write the final report">Mengisi jurnal harian dan menyusun laporan akhir</li>
-      </ul><a class="btn ghost sm" href="https://www.smkciledugalmusaddadiyah.sch.id/p/download-administrasi.html" data-en="Download Documents">📥 Unduh Dokumen</a></div>
+      </ul><a class="btn ghost sm" href="https://www.smkciledugalmusaddadiyah.sch.id/p/download-administrasi.html" data-en="Download Documents">Unduh Dokumen</a></div>
       <div class="box"><h3 data-en="For Partner Companies">Untuk Perusahaan Mitra</h3><ul>
         <li data-en="Assign a mentor to accompany students">Menunjuk pembimbing yang mendampingi siswa</li>
         <li data-en="Provide work scope that fits the program">Menyediakan lingkup pekerjaan sesuai jurusan</li>
         <li data-en="Apply workplace safety standards">Menerapkan standar keselamatan kerja</li>
         <li data-en="Give a performance assessment at the end">Memberikan penilaian kinerja di akhir program</li>
         <li data-en="Sign a cooperation agreement with the school">Menandatangani perjanjian kerja sama dengan sekolah</li>
-      </ul><a class="btn ghost sm" href="#kontak" data-en="Propose Partnership">🤝 Ajukan Kerja Sama</a></div>
+      </ul><a class="btn ghost sm" href="#kontak" data-en="Propose Partnership">Ajukan Kerja Sama</a></div>
     </div>
   </div>
 </section>
@@ -313,7 +325,7 @@ footer .g>div>span{display:block;max-width:44ch}
 <section id="kontak" style="padding-bottom:0">
   <div class="wrap"><div class="final">
     <div><h2 data-en="Ready to Partner with SMK CALM?">Siap Bermitra dengan SMK CALM?</h2><p data-en="Contact the PKL committee to discuss cooperation, student placement, and your company's workforce needs.">Hubungi panitia PKL untuk membahas kerja sama, penempatan siswa, dan kebutuhan tenaga kerja di perusahaan Anda.</p></div>
-    <div class="cta"><a class="btn" href="https://wa.me/6287856681523?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20mengenai%20PKL%20SMK%20CALM" target="_blank" rel="noopener" data-en="💬 Chat via WhatsApp">💬 Tanya via WhatsApp</a><a class="btn ghost" href="tel:+622624892181" data-en="📞 Contact Us">📞 Hubungi Kami</a></div>
+    <div class="cta"><a class="btn" href="https://wa.me/6287856681523?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20mengenai%20PKL%20SMK%20CALM" target="_blank" rel="noopener" data-en="Chat via WhatsApp">Tanya via WhatsApp</a><a class="btn ghost" href="tel:+622624892181" data-en="Contact Us">Hubungi Kami</a></div>
   </div></div>
 </section>
 </main>
@@ -332,28 +344,37 @@ footer .g>div>span{display:block;max-width:44ch}
 <script>
 (function(){
   var M=[
-   ["📊","Akuntansi Keuangan Lembaga","AKL","Menjadi tenaga akuntansi profesional dengan penguasaan keuangan digital, perpajakan, dan aplikasi akuntansi.",["Input jurnal dan buku besar","Laporan keuangan","Administrasi perpajakan","Aplikasi akuntansi digital"],"Institutional Financial Accounting","Work as a professional accountant using digital finance, taxation, and accounting software.",["Journal and ledger entry","Financial reports","Tax administration","Digital accounting apps"]],
-   ["🛒","Bisnis Digital","BD","Membangun skill bisnis digital, social media marketing, dan branding modern di dunia usaha.",["Pengelolaan media sosial","Toko daring & marketplace","Konten & branding","Pelayanan pelanggan"],"Digital Business","Build digital business, social media marketing, and modern branding skills in real companies.",["Social media management","Online store & marketplace","Content & branding","Customer service"]],
-   ["🎨","Desain Komunikasi Visual","DKV","Praktik desain visual, ilustrasi digital, dan branding kreatif untuk percetakan dan agensi.",["Desain grafis & ilustrasi","Foto & video","Materi cetak & promosi","Branding visual"],"Visual Communication Design","Practice visual design, digital illustration, and creative branding at print shops and agencies.",["Graphic design & illustration","Photo & video","Print & promo materials","Visual branding"]],
-   ["💻","Teknik Komputer & Jaringan","TKJ","Praktik networking, administrasi server, dan dukungan teknis IT di perusahaan dan instansi.",["Instalasi jaringan","Administrasi server","Dukungan teknis IT","Perbaikan perangkat"],"Computer & Network Engineering","Hands-on networking, server administration, and IT support at companies and institutions.",["Network installation","Server administration","IT support","Device repair"]],
-   ["🚗","Teknik Kendaraan Ringan","TKR","Praktik teknologi kendaraan modern dan servis otomotif di bengkel umum maupun dealer resmi.",["Servis berkala","Perawatan mesin","Sistem kelistrikan","Pelayanan bengkel"],"Light Vehicle Engineering","Practice modern vehicle technology and automotive service at workshops and official dealers.",["Periodic service","Engine maintenance","Electrical systems","Workshop service"]],
-   ["🏍️","Teknik Sepeda Motor","TSM","Praktik servis roda dua berbasis teknologi injeksi langsung di bengkel dan dealer.",["Servis sepeda motor","Sistem injeksi","Diagnosis kerusakan","Administrasi bengkel"],"Motorcycle Engineering","Practice two-wheeler service with injection technology at workshops and dealers.",["Motorcycle service","Injection systems","Fault diagnosis","Workshop administration"]],
-   ["💼","Manajemen Perkantoran","MPLB","Praktik administrasi dan layanan perkantoran dengan teknologi perkantoran modern.",["Surat & kearsipan","Layanan front office","Pengelolaan data","Dukungan kegiatan kantor"],"Office Management","Practice administration and office services using modern office technology.",["Letters & archiving","Front office service","Data management","Office event support"]]
+   ["","Akuntansi Keuangan Lembaga","AKL","Menjadi tenaga akuntansi profesional dengan penguasaan keuangan digital, perpajakan, dan aplikasi akuntansi.",["Input jurnal dan buku besar","Laporan keuangan","Administrasi perpajakan","Aplikasi akuntansi digital"],"Institutional Financial Accounting","Work as a professional accountant using digital finance, taxation, and accounting software.",["Journal and ledger entry","Financial reports","Tax administration","Digital accounting apps"]],
+   ["","Bisnis Digital","BD","Membangun skill bisnis digital, social media marketing, dan branding modern di dunia usaha.",["Pengelolaan media sosial","Toko daring & marketplace","Konten & branding","Pelayanan pelanggan"],"Digital Business","Build digital business, social media marketing, and modern branding skills in real companies.",["Social media management","Online store & marketplace","Content & branding","Customer service"]],
+   ["","Desain Komunikasi Visual","DKV","Praktik desain visual, ilustrasi digital, dan branding kreatif untuk percetakan dan agensi.",["Desain grafis & ilustrasi","Foto & video","Materi cetak & promosi","Branding visual"],"Visual Communication Design","Practice visual design, digital illustration, and creative branding at print shops and agencies.",["Graphic design & illustration","Photo & video","Print & promo materials","Visual branding"]],
+   ["","Teknik Komputer & Jaringan","TKJ","Praktik networking, administrasi server, dan dukungan teknis IT di perusahaan dan instansi.",["Instalasi jaringan","Administrasi server","Dukungan teknis IT","Perbaikan perangkat"],"Computer & Network Engineering","Hands-on networking, server administration, and IT support at companies and institutions.",["Network installation","Server administration","IT support","Device repair"]],
+   ["","Teknik Kendaraan Ringan","TKR","Praktik teknologi kendaraan modern dan servis otomotif di bengkel umum maupun dealer resmi.",["Servis berkala","Perawatan mesin","Sistem kelistrikan","Pelayanan bengkel"],"Light Vehicle Engineering","Practice modern vehicle technology and automotive service at workshops and official dealers.",["Periodic service","Engine maintenance","Electrical systems","Workshop service"]],
+   ["","Teknik Sepeda Motor","TSM","Praktik servis roda dua berbasis teknologi injeksi langsung di bengkel dan dealer.",["Servis sepeda motor","Sistem injeksi","Diagnosis kerusakan","Administrasi bengkel"],"Motorcycle Engineering","Practice two-wheeler service with injection technology at workshops and dealers.",["Motorcycle service","Injection systems","Fault diagnosis","Workshop administration"]],
+   ["","Manajemen Perkantoran","MPLB","Praktik administrasi dan layanan perkantoran dengan teknologi perkantoran modern.",["Surat & kearsipan","Layanan front office","Pengelolaan data","Dukungan kegiatan kantor"],"Office Management","Practice administration and office services using modern office technology.",["Letters & archiving","Front office service","Data management","Office event support"]]
   ];
-  var tl=document.getElementById('tl'),pn=document.getElementById('pn'),en=false;
-  function render(sel){
+  var tl=document.getElementById('tl'),pn=document.getElementById('pn'),en=false,cur=0;
+  function show(i,focus){
+    cur=i;
+    M.forEach(function(m,j){var bt=document.getElementById('t'+j),p=document.getElementById('p'+j),on=j===i;bt.setAttribute('aria-selected',on);bt.tabIndex=on?0:-1;p.hidden=!on;});
+    if(focus)document.getElementById('t'+i).focus();
+  }
+  function build(){
     tl.innerHTML='';pn.innerHTML='';
     M.forEach(function(m,i){
-      var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.id='t'+i;
-      b.setAttribute('aria-selected',i===sel);b.setAttribute('aria-controls','p'+i);b.textContent=m[0]+' '+(en?m[5]:m[1]);tl.appendChild(b);
-      var p=document.createElement('div');p.className='panel';p.id='p'+i;p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby','t'+i);if(i!==sel)p.hidden=true;
-      var L=en?m[8]:m[4];
-      p.innerHTML='<h3>'+m[0]+' '+(en?m[5]:m[1])+' ('+m[2]+')</h3><p>'+(en?m[6]:m[3])+'</p><ul>'+L.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>';
-      pn.appendChild(p);
-      b.addEventListener('click',function(){render(i)});
+      var n=en?m[5]:m[1],L=en?m[7]:m[4];
+      var b=document.createElement('button');b.type='button';b.id='t'+i;b.textContent=n;b.setAttribute('role','tab');b.setAttribute('aria-controls','p'+i);
+      var p=document.createElement('div');p.className='panel';p.id='p'+i;p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby','t'+i);
+      p.innerHTML='<h3>'+n+' ('+m[2]+')</h3><p>'+(en?m[6]:m[3])+'</p><ul>'+L.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>';
+      b.addEventListener('click',function(){show(i,false)});
+      b.addEventListener('keydown',function(e){
+        var k=e.key,j=(k==='ArrowDown'||k==='ArrowRight')?i+1:(k==='ArrowUp'||k==='ArrowLeft')?i-1:k==='Home'?0:k==='End'?M.length-1:null;
+        if(j===null)return;e.preventDefault();show((j+M.length)%M.length,true);
+      });
+      tl.appendChild(b);pn.appendChild(p);
     });
+    show(cur,false);
   }
-  render(0);
+  build();
   function setLang(l){
     en=l==='en';document.documentElement.lang=l;
     document.querySelectorAll('[data-en]').forEach(function(e){
@@ -361,7 +382,7 @@ footer .g>div>span{display:block;max-width:44ch}
       e.innerHTML=en?e.getAttribute('data-en'):e.getAttribute('data-id');
     });
     document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l)});
-    var s=0;tl.querySelectorAll('button').forEach(function(b,i){if(b.getAttribute('aria-selected')==='true')s=i});render(s);
+    build();
   }
   document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.l)})});
   var menu=document.getElementById('menu'),nav=document.getElementById('nav');
